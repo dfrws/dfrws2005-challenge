@@ -23,7 +23,7 @@ The lab administration is seeking help in determining what occurred. In addition
 
 dfrws2005-timeline.txt (MD5 = c6bda8e2d9933167c3174e1ef31bbea1): File system timeline generated using the Sleuthkit
 
-dfrws2005-body-file.fls (MD5 = 896a33f0ba5be435d6f9fa7edd52ad92): The same file system metadata in mactime format obtained using the Sleuthkit command fls -m '/' -r /dev/hda1
+[dfrws2005-body-file.fls](materials/dfrws2005-body-file.fls.bz2) (MD5 = 896a33f0ba5be435d6f9fa7edd52ad92): The same file system metadata in mactime format obtained using the Sleuthkit command fls -m '/' -r /dev/hda1
 
 Specific files from the system could be requested by providing the names of the file via email. For instance, "ntoskrnl.exe," the kernel module from the original system containing various memory management functions may be useful for your analysis.
 
@@ -37,13 +37,12 @@ Specific files from the system could be requested by providing the names of the 
 - Is there any indication of who the intruder might be?
 
 ## Additional Files (Released at DFRWS 2005)
-- Network capture log: dfrws2005-network-capture.tcp
-- Kernel file: ntoskrnl.exe
-- Driver file: tcpip.sys
-- Acquisition audit logs:
-- dfrws2005-body-file.fls.md5
-- dfrws2005-network-capture.tcp.md5
-- dfrws2005-physical-memory1.dmp.md5
-- dfrws2005-physical-memory1-audit.log
-- dfrws2005-physical-memory2.dmp.md5
-- dfrws2005-physical-memory2-audit.log
+
+## Additional Files Released at DFRWS 2005
+| File Name | MD5 | Info |
+| --- | --- | --- |
+[dfrws2005-network-capture.tcp](materials/dfrws2005-body-file.fls.bz2) | f239127c208e91b069ebfabef4c9084a | Network capture log
+ntoskrnl.exe | | Kernel file
+tcpip.sys | | Driver file
+[dfrws2005-physical-memory1-audit.log](materials/dfrws2005-physical-memory1-audit.log.md) | n/a | Acquisition audit logs
+[dfrws2005-physical-memory2-audit.log](materials/dfrws2005-physical-memory2-audit.log.md) | n/a | Acquisition audit logs
