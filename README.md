@@ -15,13 +15,13 @@ For several years, Professor Goatboy has been performing secret research that is
 
 In the last week of May, Professor Goatboy settled into his new office and moved his work onto the new laptop he had been assigned. Unfortunately, he was too busy during the first week at his new job to get much work done, and did not have time to secure the fresh installation of Windows 2000 on his laptop.
 
-On Sunday June 5th, the research lab's incident response coordinator, Tom "Blackout Jack" Daniels, was examining network logs from the previous night and noticed unusual traffic coming from Professor Goatboy's computer. He promptly located the laptop in the professor's office, and used Helix 1.6 to dump physical memory (dfrws2005-physical-memory1.dmp) (MD5 = 2d767dbc338075f7c7594894716f3290). He attempted to find signs of intrusion on the system but had difficulty executing some of his tools. Specifically, the system would not run "pslist.exe" or "fport.exe" to gather information about running processes. In addition, while he was attempting to create forensic duplicate of the drive, the system rebooted unexpectedly.
+On Sunday June 5th, the research lab's incident response coordinator, Tom "Blackout Jack" Daniels, was examining network logs from the previous night and noticed unusual traffic coming from Professor Goatboy's computer. He promptly located the laptop in the professor's office, and used Helix 1.6 to dump physical memory ([dfrws2005-physical-memory1.dmp](https://www.dropbox.com/s/cspavwi3w4wskuh/dfrws2005-physical-memory1.dmp.bz2?dl=0)) (MD5 = 2d767dbc338075f7c7594894716f3290). He attempted to find signs of intrusion on the system but had difficulty executing some of his tools. Specifically, the system would not run "pslist.exe" or "fport.exe" to gather information about running processes. In addition, while he was attempting to create forensic duplicate of the drive, the system rebooted unexpectedly.
 
-When the system came back up, Daniels acquired the physical memory again (dfrws2005-physical-memory2.dmp) (MD5 = dbca88eeb7b8dbd42f406a405e6f56cf), and again tried to acquire an image of the disk using Helix 1.6 under Windows without success. Finally, he rebooted the system using the Helix CD and acquired the drive using Grab 1.2.2.
+When the system came back up, Daniels acquired the physical memory again ([dfrws2005-physical-memory2.dmp](https://www.dropbox.com/s/syr47y9nljpeguf/dfrws2005-physical-memory2.dmp.bz2?dl=0)) (MD5 = dbca88eeb7b8dbd42f406a405e6f56cf), and again tried to acquire an image of the disk using Helix 1.6 under Windows without success. Finally, he rebooted the system using the Helix CD and acquired the drive using Grab 1.2.2.
 
 The lab administration is seeking help in determining what occurred. In addition to the memory dumps, the following information is available:
 
-dfrws2005-timeline.txt (MD5 = c6bda8e2d9933167c3174e1ef31bbea1): File system timeline generated using the Sleuthkit
+[dfrws2005-timeline.txt](materials/dfrws2005-timeline.txt.zip) (MD5 = c6bda8e2d9933167c3174e1ef31bbea1 of the raw file): File system timeline generated using the Sleuthkit
 
 [dfrws2005-body-file.fls](materials/dfrws2005-body-file.fls.bz2) (MD5 = 896a33f0ba5be435d6f9fa7edd52ad92): The same file system metadata in mactime format obtained using the Sleuthkit command fls -m '/' -r /dev/hda1
 
@@ -42,7 +42,7 @@ Specific files from the system could be requested by providing the names of the 
 | File Name | MD5 | Info |
 | --- | --- | --- |
 [dfrws2005-network-capture.tcp](materials/dfrws2005-body-file.fls.bz2) | f239127c208e91b069ebfabef4c9084a | Network capture log
-ntoskrnl.exe | | Kernel file
-tcpip.sys | | Driver file
+[ntoskrnl.exe](materials/NTOSKRNL.EXE.bz2) | b100ac8cb500765127b23e2ac098047d | Kernel file
+[tcpip.sys](materials/TCPIP.SYS.bz2) | 5ca6397605ce0ae8414f996a29354cbb | Driver file
 [dfrws2005-physical-memory1-audit.log](materials/dfrws2005-physical-memory1-audit.log.md) | n/a | Acquisition audit logs
 [dfrws2005-physical-memory2-audit.log](materials/dfrws2005-physical-memory2-audit.log.md) | n/a | Acquisition audit logs
